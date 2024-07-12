@@ -1,6 +1,4 @@
-provider aws {
-    region = "us-west-2"
-}
+
 
 resource "aws_key_pair" "deployer" {
   key_name   = "bastion"
