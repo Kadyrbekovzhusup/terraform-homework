@@ -1,6 +1,6 @@
 provider "aws" {
-    region = "us-east-2"
-  
+  region = "us-east-2"
+
 }
 
 resource "aws_key_pair" "key" {
@@ -13,10 +13,10 @@ data "aws_ami" "amazon-2" {
   most_recent = true
 
   filter {
-    name = "name"
+    name   = "name"
     values = ["amzn2-ami-hvm-*-x86_64-ebs"]
   }
-   filter {
+  filter {
     name   = "virtualization-type"
     values = ["hvm"]
   }
@@ -24,12 +24,13 @@ data "aws_ami" "amazon-2" {
 }
 
 resource "aws_instance" "web" {
-  ami           = data.aws_ami.amazon-2.id
-  instance_type = "t2.micro"
-  key_name = aws_key_pair.key.key_name
+  ami                    = data.aws_ami.amazon-2.id
+  instance_type          = "t2.micro"
+  key_name               = aws_key_pair.key.key_name
   vpc_security_group_ids = [aws_security_group.sg1.id]
-  count = 3
-  subnet_id = element(var.subnets, count.index)
+  count                  = 3
+  subnet_id              = element(var.subnets, count.index)
+  user_data              = file("apache.sh")
 
   tags = {
     Name = "web-${count.index + 1}"
