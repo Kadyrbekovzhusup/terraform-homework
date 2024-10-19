@@ -1,5 +1,7 @@
 # terraform-homework
- ⬇⬇⬇  OHIO REGION ⬇⬇⬇
+    
+    
+    ⬇⬇⬇  OHIO REGION ⬇⬇⬇
 
 1) We need to open new file (ohio.tfvars)
 2) inside of file provide this resources:
@@ -17,11 +19,11 @@ instance_count = 1
 Terraform init 
 Terraform apply -var-file ohio.tfvars --auto-approve
 
-    just by this way you can destroy your resource
+     just by this way you can destroy your resource
 
 Terraform destroy -var-file ohio.tfvars --auto-approve
  
-   ⬇⬇⬇  VIRGINIA REGION ⬇⬇⬇
+    ⬇⬇⬇  VIRGINIA REGION ⬇⬇⬇
 
 1) We need to open new file (virginia.tfvars)
 2) inside of file provide this resources:
@@ -39,11 +41,11 @@ instance_count = 1
 Terraform init 
 Terraform apply -var-file virginia.tfvars --auto-approve
 
-    just by this way you can destroy your resource
+     just by this way you can destroy your resource
 
 Terraform destroy -var-file virginia.tfvars --auto-approve
 
- ⬇⬇⬇   CALIFORIA REGION   ⬇⬇⬇
+    ⬇⬇⬇   CALIFORIA REGION   ⬇⬇⬇
 
 1) We need to open new file (california.tfvars)
 2) inside of file provide this resources:
@@ -61,11 +63,11 @@ instance_count = 1
 Terraform init 
 Terraform apply -var-file california.tfvars --auto-approve
 
-    just by this way you can destroy your resource
+     just by this way you can destroy your resource
 
 Terraform destroy -var-file california.tfvars --auto-approve
 
-  ⬇⬇⬇    OREGON REGION   ⬇⬇⬇
+    ⬇⬇⬇    OREGON REGION   ⬇⬇⬇
 
 1) We need to open new file (oregon.tfvars)
 2) inside of file provide this resources:
@@ -83,7 +85,7 @@ instance_count = 1
 Terraform init 
 Terraform apply -var-file oregon.tfvars --auto-approve
 
-    just by this way you can destroy your resource
+     just by this way you can destroy your resource
 
 Terraform destroy -var-file oregon.tfvars --auto-approve
 
